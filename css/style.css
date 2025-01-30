@@ -40,15 +40,55 @@ header{
     text-decoration: none;
     font-size: 28px;
     display: flex;
-
 }
 .header__nav li a img{
 
 }
 .header__menu{
     /*background: violet;*/
-
 }
 .header__menu img {
+
+}
+
+main{
+    background: green;
+    padding-top: 15px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.section__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.article__jumping{
+    width: 679px;
+    background: violet;
+    display: flex;
+    flex-direction: column;
+}
+.article__jumping h1 {
+    font-family: "Poppins-SemiBold";
+    color: var(--color-1);
+    font-size: 120px;
+    line-height: 110px;
+
+}
+.article__jumping p {
+    font-family: "Poppins-Medium";
+    color: var(--color-1);
+    font-size: 24px;
+
+
+}
+.div__buttons{
+    background: rebeccapurple;
+    display: flex;
+
+
+}
+.div__buttons a{
 
 }
