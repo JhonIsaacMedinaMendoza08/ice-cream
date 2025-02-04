@@ -8,7 +8,7 @@ body{
     background-image: url(../storage/img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: 50% 50%;
     background-color: var(--color-8);
 
     /* background-color: var(--color-8); */
@@ -21,6 +21,7 @@ header{
     padding-top: 45px;
     padding-left: 75px;
     padding-right: 75px;
+    
 
 }
 .header__logo{
@@ -34,26 +35,24 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 54px;
+    gap: 55px;
 }
 .header__nav li{
     list-style: none;
 }
 .header__nav li a{
-    font-family: "Poppins-SemiBold";
     color: var(--color-1);
     text-decoration: none;
+    font-family: "Poppins-SemiBold";
     font-size: 28px;
     display: flex;
 }
 .header__nav li a img{
-
 }
 .header__menu{
     /* background: violet; */
 }
 .header__menu img{
-
 }
 
 main{
@@ -117,13 +116,12 @@ main{
 }
 .div__buttons:hover a:hover{
     outline: none;
-    backdrop-filter: blur(24px);
-}
+    backdrop-filter: blur(200px);
 
+}
 
 #reviews{
     /* background: blue; */
-    /* height: 281px; */
     height: 221px;
     padding-top: 18px;
     padding-left: 18px;
@@ -139,18 +137,15 @@ main{
 #reviews::-webkit-scrollbar {
     width: 10px; /* Ancho de la barra de desplazamiento */
 }
-
 /* Personaliza el riel de la barra de desplazamiento */
 #reviews::-webkit-scrollbar-track {
     background: transparent; /* Color del fondo */
 }
-
 /* Personaliza el 'thumb' de la barra de desplazamiento */
 #reviews::-webkit-scrollbar-thumb {
     background: var(--color-1); /* Color del thumb */
     border-radius: 10px; /* Bordes redondeados */
 }
-
 /* Estiliza el thumb cuando se pasa el cursor sobre él */
 #reviews::-webkit-scrollbar-thumb:hover {
     background: var(--color-6);
@@ -168,7 +163,6 @@ main{
 }
 .div__reviews-container:nth-child(2){
     --index: 2;
-
     /* top: 20px; */
 }
 .div__reviews-container:nth-child(3){
@@ -179,7 +173,6 @@ main{
     --index: 4;
     /* top: 60px; */
 }
-
 .article__reviews {
     /* background: red; */
     overflow-y: auto;
@@ -192,7 +185,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-
     border: 1px solid var(--color-5);
     position: sticky;
     top: 0px;
@@ -223,8 +215,9 @@ main{
 .div__reviews-profile {
     /* background: violet; */
     /* padding: 20px; */
-    gap: 16px;
     display: flex;
+    gap: 16px;
+    
 }
 .div__reviews-profile img {
     /* background: orange; */
@@ -256,9 +249,7 @@ main{
 .div__reviews-stars img{
     /* background: turquoise; */
     padding: 0;
-
 }
-
 .div__choose-type {
     /* background: violet; */
     display: flex;
@@ -270,7 +261,6 @@ main{
     color: var(--color-1);
     font-family: "Poppins-Medium";
     font-size: 20px;
-
 }
 .div__choose-type-buttons {
     display: flex;
@@ -295,21 +285,39 @@ main{
 .div__choose-type-buttons a:hover{
     background: var(--color-6);
 }
-
 .section__container-products {
     /* background: red; */
     /* padding: 20px; */
+    padding-top: 63px;
+    padding-right: 64px;
+    padding-left: 78px;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 
 }
 .div__trendy {
-    background: violet;
+    background: var(--color-1);
+    width: 213px;
+    height: 54px;
+    /* margin-right: 64px; */
+    border-radius: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .div__trendy h2 {
+    color: var(--color-2);
+    font-family: "Poppins-Medium";
+    font-size: 28px;
+    padding-right: 39px;
 
 }
 .div__trendy img {
+    position: absolute;
+    top: -10px;
+    right: 0px;
 
 }
 .article__products {
@@ -317,47 +325,180 @@ main{
     /* padding: 20px; */    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     row-gap: 59px;
     column-gap: 52px;
+    padding-top: 45px;
 }
 .form__container-product {
-    background: orange;
     position: relative;
     overflow: hidden;
     width: 690px;
     height: 324px;
     display: flex;
+    gap: 58px;
+    padding-left: 38px;
     align-items: center;
     outline: 1px solid var(--color-1);
     border-radius: 24px;
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease; /* Para suavizar el cambio de color */
 }
+
+.form__container-product:focus-within,
+.form__container-product:focus-within h3,
+.form__container-product:focus-within span,
+.form__container-product:focus-within input[type="submit"],
+.form__container-product:focus-within label ,
+.form__container-product:focus-within button ,
+.form__container-product:focus-within input[type="number"],
+.form__container-product:focus-within .quantity-container{
+    color: var(--color-2); /* Cambiar a negro cuando esté en foco */
+    background: var(--color-1); /* Cambiar a blanco cuando esté en foco */
+}
+.form__container-product:focus-within input[type="submit"],
+.form__container-product:focus-within .quantity-container{
+    outline: 1px solid var(--color-2);
+}
+
+.form__container-product:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+.form__container-product:active,
+.form__container-product:active h3,
+.form__container-product:active span,
+.form__container-product:active input[type="submit"],
+.form__container-product:active label,
+.form__container-product:active button ,
+.form__container-product:active input[type="number"],
+.form__container-product:active .quantity-container{
+    background: var(--color-1);
+    color: var(--color-2);
+}
+.form__container-product:active input[type="submit"],
+.form__container-product:active .quantity-container {
+    outline: 1px solid var(--color-2);
+}
+
 .form__container-product img{
     /* background: violet; */
     width: 217px;
     height: 217px;
-    object-fit: contain;
+    object-fit: none;
 }
 .div__product {
-    background: turquoise;
+    /* background: turquoise; */
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 18px;
 
 
 }
 .div__product h3{
+    color: var(--color-1);
+    font-family: "Poppins-Medium";
+    font-size: 32px;
+}
+.div__product span{
+    color: var(--color-1);
+    font-family: "Poppins-Medium";
+    font-size: 20px;
 }
 .div__product label{
+    color: var(--color-1);
+    font-family: "Poppins-Regular";
+    font-size: 28px;
 }
 .div__type-order {
-    background: yellow;
+    /* background: red; */
+    width: 309px;
+    display: flex;
+    gap: 31px;
 }
 .div__type-order input[type="submit"]{
+    width: 139px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    outline: 1px solid var(--color-1);
+    background: transparent;
+    font-family: "Poppins-Regular";
+    font-size: 18px;
+    color: var(--color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.div__product-amount {
-    background: olive;
+.div__product-amount {    
+    width: 309px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-family: "Poppins-Medium";
 }
-.div__product-amount input[type="number"]{
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--color-1);
+    border-radius: 11px;
+    padding: 2px;
+}
+
+.quantity-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: var(--color-1);
+}
+
+.quantity-input {
+    width: 40px;
+    background: transparent;
+    color: var(--color-1);
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    appearance: textfield; /* Oculta los controles nativos en algunos navegadores */
+}
+/* Ocultar flechas en el input en navegadores WebKit (Chrome, Safari, Edge) */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+footer{
+    /* background: red; */
+    margin-top: 51px;
+    padding-left: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+footer p{
+    color: var(--color-1);
+    font-family: "Poppins-Regular";
+    font-size: 18px;
+}
+.footer__social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    padding-right: 75px;
+
+
 }
